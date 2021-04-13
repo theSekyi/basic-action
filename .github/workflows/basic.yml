@@ -1,3 +1,16 @@
+# name: Basic
+
+# on: push
+
+# jobs:
+#   trial-job:
+#     name: Say Greetings
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Echo text
+#         run: |
+#           echo This is our basic workflow
+
 name: Basic
 
 on: push
@@ -7,6 +20,8 @@ jobs:
     name: Say Greetings
     runs-on: ubuntu-latest
     steps:
-      - name: Echo text
-        run: |
-          echo This is our basic workflow
+      - name: ASCII echo text
+        uses: mscoutermarsch/ascii-art-action@master
+        with:
+          name: Welcome Message
+          text: This is our second action
